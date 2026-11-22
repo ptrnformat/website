@@ -17,6 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/assets/fonts/arvo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/styles.css">
+<script src="/nav.js" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -24,7 +25,12 @@
 <header class="site-header">
   <div class="container">
     <a class="logo" href="#top"><img src="/assets/brand/ptrn-wg-horizontal.svg" alt="PTRN Working Group" width="140" height="44"></a>
-    <nav class="nav" aria-label="Main">
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" hidden>
+      <svg class="nav-toggle-open" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <svg class="nav-toggle-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      <span class="visually-hidden">Menu</span>
+    </button>
+    <nav class="nav" id="site-nav" aria-label="Main">
       <a href="#why">Why PTRN</a>
       <a href="#organizations">Craft organizations</a>
       <a href="#crafts">Crafts</a>
@@ -68,7 +74,7 @@
         <h2 class="h2">Why a shared format</h2>
         <p>Today a pattern is a document a person reads. PTRN describes every stitch, where it goes and how rows relate, so any app can chart it, check the counts, track a maker's place and switch between US and UK terms, from the same file.</p>
       </div>
-      <div class="grid">
+      <div class="grid grid--why">
         <div class="card"><h3 class="h3">One file, any app</h3><p class="small">A designer publishes once. Any conforming reader can open it, now and later.</p></div>
         <div class="card"><h3 class="h3">The vocabulary makers know</h3><p class="small">Uses the CYC abbreviations and chart symbols instead of inventing new ones.</p></div>
         <div class="card"><h3 class="h3">Offline, forever</h3><p class="small">Everything a pattern needs is inside the file. No network, no account, no vendor.</p></div>

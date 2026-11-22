@@ -71,6 +71,30 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--accent); outlin
 .nav a { color: var(--ink); text-decoration: none; padding: 10px 0; }
 .nav a:hover { text-decoration: underline; text-underline-offset: 4px; }
 
+.visually-hidden {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* Menu toggle: only shown on narrow screens, and only when JavaScript runs */
+.nav-toggle {
+  display: none; align-items: center; justify-content: center;
+  width: 44px; height: 44px; padding: 0; border: 0; border-radius: 8px;
+  background: transparent; color: var(--ink); cursor: pointer;
+}
+.nav-toggle-close { display: none; }
+
+@media (max-width: 860px) {
+  .site-header .container { position: relative; }
+  .has-js .nav-toggle:not([hidden]) { display: inline-flex; }
+  .nav { flex-direction: column; gap: 0; width: 100%; }
+  .nav a { padding: 12px 0; border-top: 1px solid var(--hairline); font-size: 16px; }
+  .has-js .nav { display: none; }
+  .has-js.nav-open .nav { display: flex; }
+  .has-js.nav-open .nav-toggle-open { display: none; }
+  .has-js.nav-open .nav-toggle-close { display: block; }
+}
+
 /* Sections */
 .section { padding: 80px 0; }
 .section--muted { background: var(--surface-muted); }
@@ -168,7 +192,18 @@ code { font-family: var(--font-mono); }
 .site-footer .container > * { flex: 1 1 320px; min-width: 0; }
 .site-footer .container > :first-child { flex-basis: 520px; display: flex; flex-direction: column; gap: 4px; }
 
+/* Tablet: between phone and desktop */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .grid--why { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid--crafts { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .grid--crafts > * { grid-column: span 2; }
+  .grid--crafts > :nth-child(-n+2) { grid-column: span 3; }
+  .grid--tools { grid-template-columns: minmax(0, 1fr); }
+}
+
 @media (max-width: 640px) {
+  .buttons { flex-direction: column; }
+  .btn { justify-content: center; width: 100%; }
   .hero { padding: 56px 0 48px; }
   .hero h1 { font-size: 38px; line-height: 46px; }
   .section { padding: 56px 0; }
