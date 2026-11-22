@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PTRN — an open file format for stitched-craft patterns</title>
+<meta name="description" content="PTRN (.ptrn) is an open file format for stitched-craft patterns, built on the Craft Yarn Council standards. Maintained by the PTRN Working Group.">
+<link rel="canonical" href="https://ptrnformat.org/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="PTRN — an open file format for stitched-craft patterns">
+<meta property="og:description" content="Built on the Craft Yarn Council standards. Owned by no company. Free for anyone to use.">
+<meta property="og:url" content="https://ptrnformat.org/">
+<meta property="og:image" content="https://ptrnformat.org/assets/brand/ptrn-social-org.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="/assets/fonts/arvo-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="container">
+    <a class="logo" href="#top"><img src="/assets/brand/ptrn-wg-horizontal.svg" alt="PTRN Working Group" width="140" height="44"></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#why">Why PTRN</a>
+      <a href="#organizations">Craft organizations</a>
+      <a href="#crafts">Crafts</a>
+      <a href="#tools">Tools</a>
+      <a href="#build">Designers &amp; apps</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="hero" id="top">
+    <div class="container">
+      <div class="hero-copy">
+        <span class="badge">Draft specification · open for review</span>
+        <h1>An open file format for stitched-craft patterns.</h1>
+        <p class="lede">PTRN builds on the Craft Yarn Council standards the community already uses, so a pattern can travel as structured data instead of a flat PDF. No company owns it, and anyone can use it.</p>
+        <div class="buttons">
+          <a class="btn btn--primary" href="https://github.com/ptrnformat/spec">Read the draft spec</a>
+          <a class="btn btn--outline" href="#contact">Talk to the Working Group</a>
+        </div>
+      </div>
+      <aside class="glance" aria-labelledby="glance-title">
+        <h2 class="eyebrow" id="glance-title">At a glance</h2>
+        <dl>
+          <div><dt>File extension</dt><dd>.ptrn</dd></div>
+          <div><dt>Status</dt><dd>Draft</dd></div>
+          <div><dt>First crafts</dt><dd>Crochet and knitting</dd></div>
+          <div><dt>Stitch vocabulary</dt><dd>CYC standards</dd></div>
+          <div><dt>Spec license</dt><dd>CC BY 4.0</dd></div>
+          <div><dt>Maintained by</dt><dd>PTRN Working Group</dd></div>
+        </dl>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--slate" id="why">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">Why a shared format</h2>
+        <p>Today a pattern is a document a person reads. PTRN describes every stitch, where it goes and how rows relate, so any app can chart it, check the counts, track a maker's place and switch between US and UK terms, from the same file.</p>
+      </div>
+      <div class="grid">
+        <div class="card"><h3 class="h3">One file, any app</h3><p class="small">A designer publishes once. Any conforming reader can open it, now and later.</p></div>
+        <div class="card"><h3 class="h3">The vocabulary makers know</h3><p class="small">Uses the CYC abbreviations and chart symbols instead of inventing new ones.</p></div>
+        <div class="card"><h3 class="h3">Offline, forever</h3><p class="small">Everything a pattern needs is inside the file. No network, no account, no vendor.</p></div>
+        <div class="card"><h3 class="h3">Free to implement</h3><p class="small">An open spec, JSON Schemas and test files. No permission or fees required.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--muted" id="organizations">
+    <div class="container split">
+      <div class="split-main">
+        <span class="eyebrow">For craft organizations and guilds</span>
+        <h2 class="h2">Built on your standards, not around them</h2>
+        <p class="muted">The Craft Yarn Council's abbreviations and chart symbols are the foundation of PTRN's stitch vocabulary. We want the people who set and teach those standards to shape the format before it's final.</p>
+        <div class="buttons"><a class="btn btn--primary" href="mailto:hello@ptrnformat.org">Start a conversation</a></div>
+        <p class="muted" style="font-size: 13px; line-height: 20px; margin-top: 8px">PTRN is independent and is not endorsed by the Craft Yarn Council.</p>
+      </div>
+      <ol class="points split-side">
+        <li><span class="num">01</span><div><h3 class="h3">Your standards, credited</h3><p class="small muted">PTRN uses CYC abbreviations and chart symbols as its stitch vocabulary and credits them wherever they appear.</p></div></li>
+        <li><span class="num">02</span><div><h3 class="h3">Neutral by design</h3><p class="small muted">PTRN belongs to no app or company. Anyone can implement it, and decisions are made in public.</p></div></li>
+        <li><span class="num">03</span><div><h3 class="h3">Shape it while it's a draft</h3><p class="small muted">Review the draft, propose changes to the stitch registry and help decide how the format grows beyond crochet and knitting.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="crafts">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">Crafts in scope</h2>
+        <p>Crochet and knitting come first, because both are covered by the CYC standards. Cross-stitch, needlepoint and embroidery are reserved in the format and come later.</p>
+      </div>
+      <div class="grid grid--crafts">
+        <div class="card craft craft--active"><span class="craft-name">Crochet</span><span class="tag tag--active">In progress</span></div>
+        <div class="card craft craft--active"><span class="craft-name">Knitting</span><span class="tag tag--active">In progress</span></div>
+        <div class="card craft craft--planned"><span class="craft-name">Cross-stitch</span><span class="tag tag--planned">Planned</span></div>
+        <div class="card craft craft--planned"><span class="craft-name">Needlepoint</span><span class="tag tag--planned">Planned</span></div>
+        <div class="card craft craft--planned"><span class="craft-name">Embroidery</span><span class="tag tag--planned">Planned</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--muted" id="tools">
+    <div class="container">
+      <div class="section-head">
+        <h2 class="h2">Free tools from the Working Group</h2>
+        <p>Basic, open-source tools so anyone can use PTRN files before other apps support them.</p>
+      </div>
+      <div class="grid grid--tools">
+        <div class="card card--outline">
+          <div class="tool-head"><h3 class="tool-name">Read</h3><span class="tag tag--planned">Planned</span></div>
+          <p class="small">Open a .ptrn file in the browser and follow the pattern.</p>
+          <code class="tool-host">read.ptrnformat.org</code>
+        </div>
+        <div class="card card--outline">
+          <div class="tool-head"><h3 class="tool-name">Write</h3><span class="tag tag--planned">Planned</span></div>
+          <p class="small">Create and edit .ptrn files without writing code.</p>
+          <code class="tool-host">write.ptrnformat.org</code>
+        </div>
+        <div class="card card--outline">
+          <div class="tool-head"><h3 class="tool-name">Convert</h3><span class="tag tag--planned">Planned</span></div>
+          <p class="small">Turn a PDF pattern into a .ptrn file. The tool does a first pass, then the designer reviews and corrects it before saving.</p>
+          <code class="tool-host">convert.ptrnformat.org</code>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="build">
+    <div class="container">
+      <h2 class="h2" style="margin-bottom: 40px">For designers and app makers</h2>
+      <div class="split">
+        <div class="split-main" style="flex-basis: 320px; gap: 12px">
+          <h3 class="h3" style="font-size: 20px">Pattern designers</h3>
+          <p class="muted">Publish one file that any PTRN reader can open, with your stitch counts, charts and notes intact. Custom stitches travel inside the file, so nothing depends on a particular app.</p>
+        </div>
+        <div class="split-main" style="flex-basis: 480px; gap: 12px">
+          <h3 class="h3" style="font-size: 20px">App makers</h3>
+          <p class="muted">Read and write PTRN without permission or fees.</p>
+          <ul class="repos">
+            <li><a href="https://github.com/ptrnformat/spec"><code>ptrnformat/spec</code><span>Specification, JSON Schemas, stitch registry and test files.</span></a></li>
+            <li><a href="https://github.com/ptrnformat/ptrn-js"><code>ptrnformat/ptrn-js</code><span>The TypeScript reference implementation.</span></a></li>
+            <li><a href="https://github.com/ptrnformat/website"><code>ptrnformat/website</code><span>The source for ptrnformat.org.</span></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--muted" id="contact">
+    <div class="container split">
+      <div class="split-main" style="flex-basis: 420px">
+        <h2 class="h2">Get in touch</h2>
+        <p class="muted">Organizations, designers and developers can write to the Working Group directly. Proposed changes to the format go through public issues on the spec repository.</p>
+        <div class="buttons">
+          <a class="btn btn--primary" href="mailto:hello@ptrnformat.org">hello@ptrnformat.org</a>
+          <a class="btn btn--outline" href="https://github.com/ptrnformat/spec/issues">Open an issue</a>
+        </div>
+      </div>
+      <div class="split-side small muted" style="flex-basis: 360px; gap: 12px">
+        <p><strong style="color: var(--ink)">Governance.</strong> Decisions are made in public and recorded with their reasoning. The long-term intent is to move PTRN to a neutral foundation, with community input on that move.</p>
+        <p><strong style="color: var(--ink)">Versioning.</strong> Breaking changes only in a new major version. Minor versions only add optional fields.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <span>PTRN is an independent project. It uses the Craft Yarn Council's published standards for abbreviations and chart symbols, but is not affiliated with or endorsed by the Craft Yarn Council.</span>
+      <span>Source: Craft Yarn Council <a href="https://www.craftyarncouncil.com">www.YarnStandards.com</a></span>
+    </div>
+    <span>© PTRN Working Group. Specification licensed CC BY 4.0. The PTRN name and logo are trademarks of the Working Group.</span>
+  </div>
+</footer>
+</body>
+</html>
