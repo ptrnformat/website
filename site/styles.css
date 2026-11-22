@@ -192,6 +192,15 @@ code { font-family: var(--font-mono); }
 .site-footer .container > * { flex: 1 1 320px; min-width: 0; }
 .site-footer .container > :first-child { flex-basis: 520px; display: flex; flex-direction: column; gap: 4px; }
 
+/* Tablet: between phone and desktop */
+@media (min-width: 641px) and (max-width: 1023px) {
+  .grid--why { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid--crafts { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .grid--crafts > * { grid-column: span 2; }
+  .grid--crafts > :nth-child(-n+2) { grid-column: span 3; }
+  .grid--tools { grid-template-columns: minmax(0, 1fr); }
+}
+
 @media (max-width: 640px) {
   .buttons { flex-direction: column; }
   .btn { justify-content: center; width: 100%; }
